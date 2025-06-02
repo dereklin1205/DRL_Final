@@ -21,7 +21,8 @@ def run_abc_env(env, command_type, iterations=1, output_dir = ""):
         f"read {env._current_aig}",
         f"&r {env._current_aig}",
         command,
-        f"write {temp_aig}"
+        f"write {temp_aig}",
+        f"print_stats"
     ]
     
     joined = "\n".join(commands) + "\nquit\n"
